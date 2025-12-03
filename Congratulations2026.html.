@@ -4,6 +4,7 @@
 <title>Поздравление!</title>
     <meta charset="UTF-8">
     <title>Заголовок страницы</title>
+<link type=“text/css” rel=“stylesheet” href=“style.css” />
 </head>
 <body>
 
