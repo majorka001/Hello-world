@@ -1,6 +1,134 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head> 
+  <h2>21 января,2026</h2>
+  <html lang="ru">
 <head>
+  <meta charset="UTF-8">
+  <title>Криптография RSA</title>
+  <style>
+    @font-face {
+      font-family: 'Pudelinka'
+      font-weight: normal;
+      font-style: normal; 
+    }
+    .rsa-title {
+      font-family: 'Pudelinka', sans-serif;
+      font-size: 2.5em;
+      color: #2c3e50 
+    }
+  </style>
+</h</style>
+</head>
+<body>
+  <h1>🔐 Учебный пример алгоритма RSA</h1>
+  
+  <p>Мы вручную создаём открытый и закрытый ключи, шифруем сообщение и расшифровываем его.</p>
+
+  <h2>1. Выбор параметров</h2>
+  <ul>
+    <li>Простые числа: <code>p = 5</code>, <code>q = 11</code></li>
+    <li>Модуль: <code>n = p × q = 55</code></li>
+    <li>Функция Эйлера: <code>φ(n) = (p−1)(q−1) = 40</code></li>
+    <li>Открытая экспонента: <code>e = 3</code> (НОД(3, 40) = 1)</li>
+    <li>Закрытая экспонента: <code>d = 27</code>, так как <code>(3 × 27) mod 40 = 1</code></li>
+  </ul>
+
+  <h2>2. Ключи</h2>
+  <div class="key-box">
+    <strong>Открытый ключ:</strong> <code>(n, e) = (55, 3)</code>
+  </div>
+  <div class="key-box">
+    <strong>Закрытый ключ:</strong> <code>(n, d) = (55, 27)</code>
+  </div>
+
+  <h2>3. Шифрование и расшифровка</h2>
+  <p>Сообщение: <code>m = 2</code> (например, «анализ готов»)</p>
+  <ul>
+    <li>Шифрование: <code>C = m<sup>e</sup> mod n = 2<sup>3</sup> mod 55 = 8</code></li>
+    <li>Расшифровка: <code>M = C<sup>d</sup> mod n = 8<sup>27</sup> mod 55 = 2</code></li>
+  </ul>
+  <p class="success">✅ Исходное сообщение восстановлено!</p>
+
+  <div class="note">
+    <strong>Важно:</strong> Это <em>учебный пример</em>. В реальных системах число <code>n</code> содержит более <strong>600 десятичных цифр</strong> (2048+ бит). Никогда не используйте маленькие числа в реальных проектах!
+  </div>
+
+  <footer style="margin-top: 40px; color: #777; font-size: 0.9em;">
+    <p>Пример создан для образовательных целей • Дата: 21 января 2026 г.</p>
+  </footer>
+</body>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content = "width=device-width, initial-scale=1.0"/>
+  <title>Реальный RSA модуль n (700 цифр)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fdfdfd;
+      color: #2d3748;
+    }
+    h1 {
+      color: #2c5282;
+      border-bottom: 2px solid #cbd5e0;
+      padding-bottom: 10px;
+    }
+    .n-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 16px;
+      font-family: monospace;
+      font-size: 14px;
+      white-space: pre-wrap;
+      word-break: break-all;
+      color: #1a202c;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .info {
+      background: #ebf8ff;
+      padding: 14px;
+      border-radius: 6px;
+      margin: 20px 0;
+      border-left: 4px solid #3182ce;
+    }
+    .note {
+      background: #fffbeb;
+      padding: 14px;
+      border-radius: 6px;
+      margin: 20px 0;
+      border-left: 4px solid #d69e2e;
+    }
+    code {
+      background: #edf2f7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Реальный RSA модуль <code>n</code> (пример из 700 десятичных цифр)</h1>
+
+  <div class="info">
+    В криптографии RSA модуль <code>n = p × q</code> — это часть <strong>открытого ключа</strong>.  
+    В реальных системах <code>n</code> содержит <strong>617–1234+ десятичных цифр</strong> (2048–4096 бит).
+  </div>
+
+  <h2>Пример модуля <code>n</code>:</h2>
+  <div class="n-box" id="n-value">
+2519538512983749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749283749......
+  </div>
+</html>ead>
+<body>
+  <div>
+    <h1 class="rsa-title">Криптография RSA</h1>
+  </div>
+</body>
+</html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Решение задач по шифру Цезаря</title>
